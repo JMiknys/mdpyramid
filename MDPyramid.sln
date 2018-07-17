@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27705.2000
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDPyramid", "MDPyramid\MDPyramid.csproj", "{5B4C4169-F973-48C9-B2C4-7033186153E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MDPyramid", "MDPyramid\MDPyramid.csproj", "{5B4C4169-F973-48C9-B2C4-7033186153E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE0F6C7C-2FFB-402D-93E8-3D771D9D1DB2}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

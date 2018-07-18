@@ -2,9 +2,10 @@
 
 namespace MDPyramid
 {
-    public interface IPyramidParser
-    {
-		PyramidNode[][] ParseHardcoded();
-		PyramidNode[][] ParseFromFile();
+	public interface IPyramidParser
+	{
+		Pyramid ParseHardcoded();
+
+		Pyramid ParseFromFile();
 	}
 }

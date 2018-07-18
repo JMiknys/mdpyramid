@@ -15,13 +15,14 @@ namespace MDPyramid
 
 		public void Run()
 		{
-			PyramidNode[][] pyramid = pyramidParser.ParseFromFile();
+			// Use either ParseFromFile() or ParseHardcoded() method
+			Pyramid pyramid = pyramidParser.ParseFromFile();
 
 			for (int y = pyramid.Length - 2; y >= 0; y--)
 			{
 				for (int x = 0; x < pyramid[y].Length; x++)
 				{
-					PyramidNode chosenPathNode = 
+					PyramidNode chosenPathNode =
 						SelectBestCandidateForPath(currentNode: pyramid[y][x], leftCandidate: pyramid[y + 1][x], rightCandidate: pyramid[y + 1][x + 1]);
 
 					if (chosenPathNode == null)

@@ -7,22 +7,22 @@ using System.Reflection;
 
 namespace MDPyramid
 {
-    public class PyramidParser : IPyramidParser
-    {
+	public class PyramidParser : IPyramidParser
+	{
 		private readonly static string inputResourceName = "MDPyramid.Input.txt";
 
-		public PyramidNode[][] ParseHardcoded()
+		public Pyramid ParseHardcoded()
 		{
-			return new PyramidNode[][]
+			return new Pyramid(new PyramidNode[][]
 			{
 				new PyramidNode[] { new PyramidNode(1) },
 				new PyramidNode[] { new PyramidNode(8), new PyramidNode(9) },
 				new PyramidNode[] { new PyramidNode(1), new PyramidNode(5), new PyramidNode(9) },
 				new PyramidNode[] { new PyramidNode(4), new PyramidNode(5), new PyramidNode(2), new PyramidNode(3) },
-			};
+			});
 		}
 
-		public PyramidNode[][] ParseFromFile()
+		public Pyramid ParseFromFile()
 		{
 			List<List<PyramidNode>> pyramid = new List<List<PyramidNode>>();
 			Assembly assembly = Assembly.GetExecutingAssembly();
@@ -43,7 +43,7 @@ namespace MDPyramid
 			}
 
 			// TODO: Return read only collection
-			return pyramid.Select(nodes => nodes.ToArray()).ToArray();
+			return new Pyramid(pyramid.Select(nodes => nodes.ToArray()).ToArray());
 		}
-    }
+	}
 }

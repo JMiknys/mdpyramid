@@ -19,6 +19,7 @@ namespace MDPyramid.Models
 		{
 			get
 			{
+				// Path starts with current nodes weight as first element
 				return path.First();
 			}
 		}

@@ -4,7 +4,7 @@
 
 Features
 
-* Use DP approach instead recursive for better performance
+* Use DP approach rather than recursive for better performance
 
 Ideas for future extension
 * Most importantly add tests and do checks for edge cases in various components
